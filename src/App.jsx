@@ -18,10 +18,9 @@ const App = () => {
       localStorage.removeItem('user');
     }
   }, [user]);
-const clientID = import.meta.env.VITE_GOOGLE_CLIENT_ID
 
   return (
-    <GoogleOAuthProvider clientId={clientID}>
+    <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
       <Router>
         <div className="min-h-screen bg-gray-100">
           <Routes>
