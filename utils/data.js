@@ -12,52 +12,52 @@ import img10 from "../src/assets/images/10.png";
 const questions = [
   {
     id: 1,
-    text: "Did you enjoy our product?",
+    text: "क्या गुम्बा कंट्रोल हुआ ?",
     image: img1
   },
   {
     id: 2,
-    text: "Was the customer service helpful?",
+    text: "क्या बोकना / केना / मीठा केना  कंट्रोल हुआ ?",
     image: img2
   },
   {
     id: 3,
-    text: "Would you recommend us to a friend?",
+    text: "क्या कचरी / शेरण्या कंट्रोल हुआ ?",
     image: img3
   },
   {
     id: 4,
-    text: "How likely are you to buy from us again?",
+    text: "क्या फुलकिया / दीपमाळ कंट्रोल हुआ ?",
     image: img4
   },
   {
     id: 5,
-    text: "How likely are you to recommend us to a friend?",
+    text: "क्या छोटी दूधी  कंट्रोल हुआ ?",
     image: img5
   },
   {
     id: 6,
-    text: "How likely are you to recommend us to a friend?",
+    text: "क्या बड़ी दूधी कंट्रोल हुआ ?",
     image: img6
   },
   {
     id: 7,
-    text: "How likely are you to recommend us to a friend?",
+    text: "क्या मकड़ा घास / रैमुकनया / थौम्बी गवत कंट्रोल हुआ ?",
     image: img7
   },
   {
     id: 8,
-    text: "How likely are you to recommend us to a friend?",
+    text: "क्या सावां कंट्रोल हुआ ?",
     image: img8
   },
   {
     id: 9,
-    text: "How likely are you to recommend us to a friend?",
+    text: "क्या विंचू कंट्रोल हुआ ?",
     image: img9
   },
   {
     id: 10,
-    text: "How likely are you to recommend us to a friend?",
+    text: "क्या दूब घास / हराळ / हराळी कंट्रोल हुआ ?",
     image: img10
   }
 ];
