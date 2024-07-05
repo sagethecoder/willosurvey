@@ -84,8 +84,8 @@ const Form = () => {
 
   return (
     <div
-      className="min-h-screen bg-cover bg-center py-12 px-4 sm:px-6 lg:px-8"
-      style={{ backgroundImage: "url('../../src/assets/willoberry.jpg')" }}
+      className="min-h-screen bg-cover bg-center custom-image py-12 px-4 sm:px-6 lg:px-8"
+{/*       style={{ backgroundImage: "url('../../src/assets/willoberry.jpg')" }} */}
     >
       <div className="max-w-md mx-auto bg-white bg-opacity-90 rounded-xl shadow-lg overflow-hidden md:max-w-2xl">
         <form onSubmit={handleSubmit} className="p-8">
