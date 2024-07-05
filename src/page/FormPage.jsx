@@ -7,6 +7,7 @@ const Form = () => {
   const [loggedUser, setLoggedUser] = useState("");
   const [isLoading, setLoading] = useState(null);
   const navigate = useNavigate();
+
   useEffect(() => {
     const getUser = localStorage.getItem("user");
     if (getUser) {
