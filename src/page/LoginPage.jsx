@@ -28,9 +28,7 @@ const LoginPage = ({ setUser }) => {
 
   return (
     <div
-      className="min-h-screen bg-cover bg-center font-serif"
-      style={{ backgroundImage: "url('../../src/assets/willoberry.jpg')" }}
-    >
+      className="min-h-screen bg-cover bg-custom-image bg-center font-serif">
       <div className="flex flex-col min-h-screen bg-gray-400 bg-opacity-20">
         <header className="p-4">
           <h1 className="text-4xl font-extrabold text-white tracking-wide">
