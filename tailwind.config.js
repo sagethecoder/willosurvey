@@ -6,11 +6,10 @@ export default {
   ],
   theme: {
     extend: {
- backgroundImage: {
+      backgroundImage: {
         'custom-image': "url('/src/assets/willoberry.jpg')",
       },
-},
+    },
   },
   plugins: [],
 }
-
