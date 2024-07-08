@@ -17,7 +17,8 @@ const Form = () => {
     area_of_soybean: "",
     patro_qty: "",
     date_of_sowing: "",
-    date_of_app: ""
+    date_of_app: "",
+    field_moist: ""
   });
   const navigate = useNavigate();
 
@@ -65,7 +66,8 @@ const Form = () => {
         basicInfo.area_of_soybean &&
         basicInfo.patro_qty &&
         basicInfo.date_of_sowing &&
-        basicInfo.date_of_app
+        basicInfo.date_of_app  &&
+        basicInfo.field_moist
       ) {
         setCurrentQuestionIndex(1);
       } else {
@@ -97,6 +99,7 @@ const Form = () => {
       patro_qty: basicInfo.patro_qty,
       date_of_sowing: basicInfo.date_of_sowing,
       date_of_app: basicInfo.date_of_app,
+      field_moist: basicInfo.field_moist,
       email: loggedUser?.email,
       question1: responses[1] || "",
       question2: responses[2] || "",
@@ -234,6 +237,21 @@ const Form = () => {
                   required
                   />
                   </div>
+                <div className="flex flex-col">
+                  <label htmlFor="">Field Moisture</label>
+                  <select
+                    name="field_moist"
+                    id=""
+                    className="p-2 bg-white"
+                    value={basicInfo.field_moist}
+                    onChange={handleBasicInfoChange}
+                  >
+                    <option value="">-- select --</option>
+                    <option value="less">Less</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="high">High</option>
+                  </select>
+                </div>
 
               </div>
             </div>
