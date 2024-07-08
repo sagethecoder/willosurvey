@@ -15,7 +15,9 @@ const Form = () => {
     farmer_name: "",
     contact: "",
     area_of_soybean: "",
-    patro_qty: ""
+    patro_qty: "",
+    date_of_sowing: "",
+    date_of_app: ""
   });
   const navigate = useNavigate();
 
@@ -61,7 +63,9 @@ const Form = () => {
         basicInfo.farmer_name &&
         basicInfo.contact &&
         basicInfo.area_of_soybean &&
-        basicInfo.patro_qty
+        basicInfo.patro_qty &&
+        basicInfo.date_of_sowing &&
+        basicInfo.date_of_app
       ) {
         setCurrentQuestionIndex(1);
       } else {
@@ -91,7 +95,9 @@ const Form = () => {
       contact: basicInfo.contact,
       area_of_soybean: basicInfo.area_of_soybean,
       patro_qty: basicInfo.patro_qty,
-      email: loggedUser.email,
+      date_of_sowing: basicInfo.date_of_sowing,
+      date_of_app: basicInfo.date_of_app,
+      email: loggedUser?.email,
       question1: responses[1] || "",
       question2: responses[2] || "",
       question3: responses[3] || "",
@@ -204,6 +210,31 @@ const Form = () => {
                   className="w-full p-2 border border-gray-300 rounded"
                   required
                 />
+               <div>
+                  <label className="block text-sm font-medium text-gray-700">Date of Sowing</label>
+                  <input
+                    type="date"
+                    name="date_of_sowing"
+                    value={basicInfo.date_of_sowing}
+                    onChange={handleBasicInfoChange}
+                    placeholder="Date of Sowing"
+                    className="w-full p-2 border border-gray-300 rounded"
+                    required
+                  />
+                </div>
+                 <div>
+                  <label className="block text-sm font-medium text-gray-700">Date of Application</label>
+                <input
+                  type="date"
+                  name="date_of_app"
+                  value={basicInfo.date_of_app}
+                  onChange={handleBasicInfoChange}
+                  placeholder="Date of Application"
+                  className="w-full p-2 border border-gray-300 rounded"
+                  required
+                  />
+                  </div>
+
               </div>
             </div>
           )}
