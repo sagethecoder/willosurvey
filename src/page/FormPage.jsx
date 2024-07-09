@@ -18,7 +18,14 @@ const Form = () => {
     patro_qty: "",
     date_of_sowing: "",
     date_of_app: "",
-    field_moist: ""
+    field_moist: "",
+    area_patromax:"",
+    pump_size:"",
+    oneacre_pump:"",
+    onepump_patromax:"",
+    soyabean:"",
+    soyabean_boni:"",
+    patromax_usage:""
   });
   const navigate = useNavigate();
 
@@ -67,7 +74,14 @@ const Form = () => {
         basicInfo.patro_qty &&
         basicInfo.date_of_sowing &&
         basicInfo.date_of_app  &&
-        basicInfo.field_moist
+        basicInfo.field_moist  &&
+        basicInfo.area_patromax &&
+        basicInfo.pump_size &&
+        basicInfo.oneacre_pump &&
+        basicInfo.onepump_patromax &&
+        basicInfo.soyabean &&
+        basicInfo.soyabean_boni &&
+        basicInfo.patromax_usage 
       ) {
         setCurrentQuestionIndex(1);
       } else {
@@ -100,6 +114,13 @@ const Form = () => {
       date_of_sowing: basicInfo.date_of_sowing,
       date_of_app: basicInfo.date_of_app,
       field_moist: basicInfo.field_moist,
+      area_patromax: basicInfo.area_patromax,
+      pump_size: basicInfo.pump_size,
+      oneacre_pump: basicInfo.oneacre_pump,
+      onepump_patromax: basicInfo.onepump_patromax,
+      soyabean: basicInfo.soyabean,
+      soyabean_boni: basicInfo.soyabean_boni,
+      patromax_usage: basicInfo.patromax_usage,
       email: loggedUser?.email,
       question1: responses[1] || "",
       question2: responses[2] || "",
@@ -252,6 +273,17 @@ const Form = () => {
                     <option value="high">High</option>
                   </select>
                 </div>
+                <div>
+                 <label className="block text-sm font-medium text-gray-700">कितने एरिया में पैट्रोमैक्स इस्तेमाल किया ?</label>
+                <input
+                  type="text"
+                  name="area_patromax"
+                  value={basicInfo.area_patromax}
+                  onChange={handleBasicInfoChange}
+                  className="w-full p-2 border border-gray-300 rounded"
+                  required
+                />
+              </div>
 
               </div>
             </div>
