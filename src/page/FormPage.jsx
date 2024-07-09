@@ -297,30 +297,6 @@ const Form = () => {
                 />
               </div>
 
-              <div>
-              <label className="block text-sm font-medium text-gray-700">1 एकड़ में कितने पम्प लगे?</label>
-                <input
-                  type="text"
-                  name="oneacre_pump"
-                  value={basicInfo.oneacre_pump}
-                  onChange={handleBasicInfoChange}
-                  className="w-full p-2 border border-gray-300 rounded"
-                  required
-                />
-              </div>
-
-              <div>
-                 <label className="block text-sm font-medium text-gray-700">1 पम्प में कितना पैट्रोमैक्स इस्तेमाल हुआ ?</label>
-                <input
-                  type="text"
-                  name="onepump_patromax"
-                  value={basicInfo.onepump_patromax}
-                  onChange={handleBasicInfoChange}
-                  className="w-full p-2 border border-gray-300 rounded"
-                  required
-                />
-              </div>
-
               </div>
             </div>
           )}
