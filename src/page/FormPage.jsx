@@ -297,6 +297,75 @@ const Form = () => {
                 />
               </div>
 
+              <div>
+              <label className="block text-sm font-medium text-gray-700">1 एकड़ में कितने पम्प लगे?</label>
+                <input
+                  type="text"
+                  name="oneacre_pump"
+                  value={basicInfo.oneacre_pump}
+                  onChange={handleBasicInfoChange}
+                  className="w-full p-2 border border-gray-300 rounded"
+                  required
+                />
+              </div>
+
+              <div>
+              <label className="block text-sm font-medium text-gray-700">1 पम्प में कितना पैट्रोमैक्स इस्तेमाल हुआ ?</label>
+                <input
+                  type="text"
+                  name="onepump_patromax"
+                  value={basicInfo.onepump_patromax}
+                  onChange={handleBasicInfoChange}
+                  className="w-full p-2 border border-gray-300 rounded"
+                  required
+                />
+              </div>
+
+              <div className="flex flex-col">
+                  <label htmlFor="">सोयाबीन पे असर</label>
+                  <select
+                    name="soyabean"
+                    id=""
+                    className="p-2 bg-white"
+                    value={basicInfo.soyabean}
+                    onChange={handleBasicInfoChange}
+                  >
+                    <option value="">-- select --</option>
+                    <option value="less">कुछ नहीं</option>
+                    <option value="moderate">हल्कए असर</option>
+                    <option value="high">थोड़ा ज़्यादा असर </option>
+                    <option value="high">बहुत ज़्यादा असर</option>
+                  </select>
+                </div>
+                <div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">सोयाबीन की बोनी कब हुई थी?</label>
+                  <input
+                    type="date"
+                    name="soyabean_boni"
+                    value={basicInfo.soyabean_boni}
+                    onChange={handleBasicInfoChange}
+                    // placeholder="Date of Sowing"
+                    className="w-full p-2 border border-gray-300 rounded"
+                    required
+                  />
+                </div>
+                 
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">पैट्रोमैक्स का इस्तेमाल कब हुआ था?</label>
+                  <input
+                    type="date"
+                    name="patromax_usage"
+                    value={basicInfo.patromax_usage}
+                    onChange={handleBasicInfoChange}
+                    // placeholder="Date of Sowing"
+                    className="w-full p-2 border border-gray-300 rounded"
+                    required
+                  />
+                </div>
+
+
               </div>
             </div>
           )}
