@@ -285,6 +285,18 @@ const Form = () => {
                 />
               </div>
 
+              <div>
+              <label className="block text-sm font-medium text-gray-700">स्प्रे पम्प का साइज ?</label>
+                <input
+                  type="text"
+                  name="pump_size"
+                  value={basicInfo.pump_size}
+                  onChange={handleBasicInfoChange}
+                  className="w-full p-2 border border-gray-300 rounded"
+                  required
+                />
+              </div>
+
               </div>
             </div>
           )}
