@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import questions from "../../utils/data";
 import { useNavigate } from "react-router-dom";
-import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from "react-hot-toast";
 
 const Form = () => {
   const [responses, setResponses] = useState({});
@@ -38,21 +38,20 @@ const Form = () => {
 
   const handleBasicInfoChange = (e) => {
     const { name, value } = e.target;
-    if(name =="contact"){
+    if (name == "contact") {
       const regex = /^[0-9\b]{0,10}$/;
-      if(value ==="" || regex.test(value)){
+      if (value === "" || regex.test(value)) {
         setBasicInfo((prevInfo) => ({
           ...prevInfo,
           [name]: value
         }));
       }
-    }else {
+    } else {
       setBasicInfo((prevInfo) => ({
         ...prevInfo,
         [name]: value
       }));
     }
-    
   };
 
   const handleResponse = (questionId, value) => {
@@ -73,8 +72,8 @@ const Form = () => {
         basicInfo.area_of_soybean &&
         basicInfo.patro_qty &&
         basicInfo.date_of_sowing &&
-        basicInfo.date_of_app  &&
-        basicInfo.field_moist  &&
+        basicInfo.date_of_app &&
+        basicInfo.field_moist &&
         basicInfo.area_patromax &&
         basicInfo.pump_size &&
         basicInfo.oneacre_pump &&
@@ -121,7 +120,7 @@ const Form = () => {
       soyabean: basicInfo.soyabean,
       soyabean_boni: basicInfo.soyabean_boni,
       patromax_usage: basicInfo.patromax_usage,
-      email: loggedUser?.email,
+      email: loggedUser.email,
       question1: responses[1] || "",
       question2: responses[2] || "",
       question3: responses[3] || "",
@@ -134,7 +133,6 @@ const Form = () => {
       question10: responses[10] || ""
     };
     console.log("datasend", dataToSend);
-    // return;
     try {
       const response = await fetch("https://sheetdb.io/api/v1/ftdo91gp1xfc2", {
         method: "POST",
@@ -234,7 +232,7 @@ const Form = () => {
                   className="w-full p-2 border border-gray-300 rounded"
                   required
                 />
-               <div>
+                <div>
                   <label className="block text-sm font-medium text-gray-700">Date of Sowing</label>
                   <input
                     type="date"
@@ -246,18 +244,18 @@ const Form = () => {
                     required
                   />
                 </div>
-                 <div>
+                <div>
                   <label className="block text-sm font-medium text-gray-700">Date of Application</label>
-                <input
-                  type="date"
-                  name="date_of_app"
-                  value={basicInfo.date_of_app}
-                  onChange={handleBasicInfoChange}
-                  placeholder="Date of Application"
-                  className="w-full p-2 border border-gray-300 rounded"
-                  required
+                  <input
+                    type="date"
+                    name="date_of_app"
+                    value={basicInfo.date_of_app}
+                    onChange={handleBasicInfoChange}
+                    placeholder="Date of Application"
+                    className="w-full p-2 border border-gray-300 rounded"
+                    required
                   />
-                  </div>
+                </div>
                 <div className="flex flex-col">
                   <label htmlFor="">Field Moisture</label>
                   <select
@@ -273,8 +271,7 @@ const Form = () => {
                     <option value="high">High</option>
                   </select>
                 </div>
-                <div>
-                 <label className="block text-sm font-medium text-gray-700">कितने एरिया में पैट्रोमैक्स इस्तेमाल किया ?</label>
+                <label className="block text-sm font-medium text-gray-700">कितने एरिया में पैट्रोमैक्स इस्तेमाल किया ?</label>
                 <input
                   type="text"
                   name="area_patromax"
@@ -294,7 +291,7 @@ const Form = () => {
               <div className="rounded">
                 <img
                   src={currentQuestion.image}
-                  alt={`Question ${currentQuestion.id}`}
+                  alt={Question ${currentQuestion.id}}
                   className="w-full h-[14rem] object-contain aspect-square rounded-lg mb-6"
                 />
               </div>
@@ -307,7 +304,7 @@ const Form = () => {
                   >
                     <input
                       type="radio"
-                      name={`question_${currentQuestion.id}`}
+                      name={question_${currentQuestion.id}}
                       value={option}
                       checked={responses[currentQuestion.id] === option}
                       onChange={() => handleResponse(currentQuestion.id, option)}
