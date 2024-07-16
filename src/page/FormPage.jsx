@@ -18,7 +18,15 @@ const Form = () => {
     patro_qty: "",
     date_of_sowing: "",
     date_of_app: "",
-    field_moist: ""
+    field_moist: "",
+
+    area_patromax: "",
+    pump_size: "",
+    oneacre_pump: "",
+    onepump_patromax: "",
+    soyabean: "",
+    soyabean_boni: "",
+    patromax_usage: ""
   });
   const navigate = useNavigate();
 
@@ -66,7 +74,14 @@ const Form = () => {
         basicInfo.patro_qty &&
         basicInfo.date_of_sowing &&
         basicInfo.date_of_app &&
-        basicInfo.field_moist
+        basicInfo.field_moist &&
+        basicInfo.area_patromax &&
+        basicInfo.pump_size &&
+        basicInfo.oneacre_pump &&
+        basicInfo.onepump_patromax &&
+        basicInfo.soyabean &&
+        basicInfo.soyabean_boni &&
+        basicInfo.patromax_usage
       ) {
         setCurrentQuestionIndex(1);
       } else {
@@ -99,6 +114,14 @@ const Form = () => {
       date_of_sowing: basicInfo.date_of_sowing,
       date_of_app: basicInfo.date_of_app,
       field_moist: basicInfo.field_moist,
+      area_patromax: basicInfo.area_patromax,
+      pump_size: basicInfo.pump_size,
+      oneacre_pump: basicInfo.oneacre_pump,
+      onepump_patromax: basicInfo.onepump_patromax,
+      soyabean: basicInfo.soyabean,
+      soyabean_boni: basicInfo.soyabean_boni,
+      patromax_usage: basicInfo.patromax_usage,
+
       email: loggedUser.email,
       question1: responses[1] || "",
       question2: responses[2] || "",
@@ -251,6 +274,116 @@ const Form = () => {
                     <option value="high">High</option>
                   </select>
                 </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    कितने एरिया में पैट्रोमैक्स इस्तेमाल किया ?
+                  </label>
+                  <input
+                    type="text"
+                    name="area_patromax"
+                    value={basicInfo.area_patromax}
+                    onChange={handleBasicInfoChange}
+                    placeholder="Area of Patromax"
+                    className="w-full p-2 border border-gray-300 rounded"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                  स्प्रे पम्प का साइज ?
+                  </label>
+                  <input
+                    type="text"
+                    name="pump_size"
+                    value={basicInfo.pump_size}
+                    onChange={handleBasicInfoChange}
+                    placeholder="Pump Size"
+                    className="w-full p-2 border border-gray-300 rounded"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                  1 एकड़ में कितने पम्प लगे?
+                  </label>
+                  <input
+                    type="text"
+                    name="oneacre_pump"
+                    value={basicInfo.oneacre_pump}
+                    onChange={handleBasicInfoChange}
+                    placeholder="One Acre Pump Installed"
+                    className="w-full p-2 border border-gray-300 rounded"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                  1 पम्प में कितना पैट्रोमैक्स इस्तेमाल हुआ?
+                  </label>
+                  <input
+                    type="text"
+                    name="onepump_patromax"
+                    value={basicInfo.onepump_patromax}
+                    onChange={handleBasicInfoChange}
+                    placeholder="Patromax Usage"
+                    className="w-full p-2 border border-gray-300 rounded"
+                    required
+                  />
+                </div>
+
+
+                <div className="flex flex-col">
+                  <label htmlFor="">सोयाबीन पे असर  ?</label>
+                  <select
+                    name="soyabean"
+                    id=""
+                    className="p-2 bg-white"
+                    value={basicInfo.field_moist}
+                    onChange={handleBasicInfoChange}
+                  >
+                    <option value="">-- select --</option>
+                    <option value="none">कुछ नहीं </option>
+                    <option value="less">हल्का  असर </option>
+                    <option value="moderate">थोड़ा ज़्यादा असर </option>
+                    <option value="high">बहुत ज़्यादा असर</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                  सोयाबीन की बोनी कब हुई थी?
+                  </label>
+                  <input
+                    type="date"
+                    name="soyabean_boni"
+                    value={basicInfo.soyabean_boni}
+                    onChange={handleBasicInfoChange}
+                    placeholder="Patromax Usage"
+                    className="w-full p-2 border border-gray-300 rounded"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                  पैट्रोमैक्स का इस्तेमाल कब हुआ था?
+                  </label>
+                  <input
+                    type="date"
+                    name="patromax_usage"
+                    value={basicInfo.patromax_usage}
+                    onChange={handleBasicInfoChange}
+                    placeholder="Patromax Usage"
+                    className="w-full p-2 border border-gray-300 rounded"
+                    required
+                  />
+                </div>
+
+
+
+
               </div>
             </div>
           )}
