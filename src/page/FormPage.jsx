@@ -168,7 +168,7 @@ const Form = () => {
       <div className="max-w-md mx-auto bg-white bg-opacity-90 rounded-xl shadow-lg overflow-hidden md:max-w-2xl">
         <form onSubmit={handleSubmit} className="p-8">
           {currentQuestionIndex === 0 && (
-            <div className="mb-2 h-[480px] overflow-auto custom-scrollbar">
+            <div className="mb-2 h-[400px] overflow-auto custom-scrollbar">
               <h2 className="text-2xl font-bold text-green-800 mb-4">Basic Information</h2>
               <div className="space-y-4">
                 <input
